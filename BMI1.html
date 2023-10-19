@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lag="en">
+<head>
+<meta charset ="UTF-8">
+<meta name="veiwport" content="width=device-width,
+inital-scale=1.0">
+<title>BMI CALCULATOR</title>
+<style>
+header {
+background-color: #1d798a;
+color: #fff;
+text-align: center;
+padding: 1rem 0;
+font-size:100px;
+};
+footer {
+background-color: #1d798a;
+color: #fff;
+text-align: left;
+padding: 10px;
+font-size: 15px;
+}
+img {
+max-width: 50%;
+height: auto;
+align-items: center;
+};
+</style>
+<script>
+function calculateRatio() {
+var height =
+parseFloat(document.getElementById('height').value);
+var weight =
+parseFloat(document.getElementById('weight').value);
+if (isNaN(height) || isNaN(weight)) {
+alert('Please enter valid height and weight values.');
+} else {
+var ratio = weight/ height ;
+document.getElementById('result').innerHTML = 'BMICALCULATOR: ' + ratio;
+}
+}
+</script>
+</head>
+<body>
+<header>
+Fitness Company
+</header>
+<h4>
+<div text-aling="center">
+<label for="height">HEIGHT (M):</label>
+<input type="text" id="height"><br>
+<label for="weight">WEIGHT (KG):</label>
+<input type="text" id="weight"><br>
+<button onclick="calculateRatio()">CALCULATE</button>
+<p id="result"></p>
+</div>
+</h4>
+<div>
+<a href="home.html">HOME</a>
+</div>
+<div>
+<a href="Plans.html">Plans</a>
+</div>
+<footer>
+<div>CONTACT US</div>
+<div>(+91) 1234567890</div>
+<div>contact@gmail.com</div>
+</footer>
+</body>
+</html>
